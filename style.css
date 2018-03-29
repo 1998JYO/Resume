@@ -1,21 +1,50 @@
+/* #tab{
+  border:2px solid #000;
+}*/
+table,tr,td{
+  border:2px solid #000;
+  border-collapse: collapse;
+  margin:3px;
+}
 .main{
+  display:flex;
+  flex-wrap: wrap;
+  }
+  .left{
+    border:2px solid #000;
+    margin:2px;
+    flex:1;
+    background-color:	#00FFFF;
+    text-align: justify;
+    padding:3px;
+  }
+  .right
+  {
+    text-align: justify;
+    border: 2px solid #000;
+    margin:2px;
+    flex:2;
+    background-color: #F0FFFF;
+    padding: 3px;
+  }
+/*.main{
   width:100%;
     background-color:#666;
     /* flex box syntax */
-    display: flex;
+    /* display: flex;
     flex-direction: row;
 }
 .left{
   width:30%;
-  background-color:#c45e45;
+  background-color:	#00FFFF;
   border:5px solid #000;
   margin:5px;
   padding:6px;
   /* background-image: url(); */
-  }
+/*  }
 .right{
   width:70%;
-  background-color:#666;
+    background-color: #F0FFFF;
   border:5px solid #000;
    margin: 5px;
 padding: 6px;
@@ -53,7 +82,7 @@ padding: 6px;
   /*  }
   .right{
       width:100%;
-      background-color:#996;
+        background-color: #F0FFFF;
       border:5px solid #000;
     }
     #name{
@@ -65,28 +94,65 @@ padding: 6px;
       border:5px solid #c454;
       }
 }*/
-@media only screen and (min-width:1024px)and (max-width:1280px) {
+ @media only screen and (min-width:1024px)and (max-width:1280px) {
 .main{
   display: flex;
   flex-direction: row;
-  width:100%
+
 }
 .left{
-  width:25%;
-  background-color: #985;
+  flex:1;
+  background-color:	#985;
 }
 .right{
-  width: 75%;
-  background-color: #5436;
+  flex:2;
+    background-color: #c454;
 }
 }
-@media only screen and (min-width:768)and (max-width:1024) {
+@media only screen and (min-width:768px)and (max-width:1024px) {
+  .main{
+    display: flex;
+    flex-direction: row;
+
+  }
+  .left{
+    flex: 1;
+    background-color:	#00FFFF;
+  }
+  .right{
+    flex:2;
+    background-color:#5436;
+  }
 
 }
-@media all and (min-width:480)and (max-width:768) {
+@media all and (min-width:480px)and (max-width:768px) {
+  .main{
+    display: flex;
+    flex-direction: row;
 
+  }
+  .left{
+    flex: 1;
+    background-color:	#00FFFF;
+  }
+  .right{
+    flex:2;
+      background-color: #A9A9A9;
+  }
 }
-@media all and(max-width:480) {
-
+@media all and(max-width:480px) {
+  .main{
+    display: flex;
+    flex-direction: row;
+    width:100%
+  }
+  .left{
+    flex: 1;
+    background-color:	#00FFFF;
+  }
+  .right{
+    flex:2;
+      background-color: #F0FFFF;
+  }
 
 }

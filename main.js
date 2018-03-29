@@ -6,7 +6,6 @@ function loadjson(file,callback) {
   xhr.onreadystatechange =function() {
     if (xhr.readyState === 4 && xhr.status =="200") {
       callback(xhr.responseText);
-
     }
   }
   xhr.send();
@@ -17,6 +16,8 @@ loadjson("data.json",function(text){
   console.log(data);
   //creating constuctor basics
   basics(data.left);
+  education(data.education);
+  skill(data.skills);
 })
 // from main div class calling
 //var main=document.queryselection('.main');
@@ -26,7 +27,7 @@ var left=document.createElement("div");
 // add class name to element
 left.classList.add("left");
 // adding text to div
-left.textContent="profile Details"
+left.textContent="profile Details:"
 left.appendChild(document.createElement("HR"));
 //add id to element
 // left.setAttribute("id","left");
@@ -48,4 +49,48 @@ var ph=document.createElement("p");
 ph.textContent=leftside.phone;
 left.appendChild(ph);
 console.log(left);
+}
+var right=document.createElement("div");
+right.classList.add("right");
+left.setAttribute("id","right");
+main.appendChild(right);
+// education div start
+var edu=document.createElement("div");
+edu.classList.add("edu1")
+edu.textContent="Education Details:";
+edu.appendChild(document.createElement("HR"));
+right.appendChild(edu);
+function  education(Educa){
+  // Educa data store in i variable
+  for(i in Educa){
+    var e1=document.createElement("div");
+    e1.classList.add("edu2");
+    e1.textContent=Educa[i].course;
+    var ul=document.createElement("ul");
+for(j in Educa[i].college)
+{
+  var li=document.createElement("li");
+  li.textContent=Educa[i].college[j];
+  ul.appendChild(li);
+  e1.appendChild(ul);
+  edu.appendChild(e1);
+  console.log(main);
+}
+  }
+}
+function skill(skills){
+  var skill_title=document.createElement("div");
+  skill_title.classList.add("tech_skills");
+  skill_title.textContent="Technical Skills:";
+  skill_title.appendChild(document.createElement("HR"));
+  right.appendChild(skill_title);
+  //table creation
+  var table=document.createElement("table");
+  var row="";
+  for(var i=0; i<skills.length;i++){
+    row=row+"<tr><td>"+skills[i].name+"</td><td>"+skills[i].value+"</td></tr>"
+  }
+  table.innerHTML=row;
+  skill_title.appendChild(table);
+
 }

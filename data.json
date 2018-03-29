@@ -4,6 +4,45 @@
     "name":"T.jyothsna",
     "email":"jyothsnatelugu@gmail.com",
     "phone":"99999999999"
-      }
-
+  },
+  "education":[
+    {
+      "course":"B.tech(computer science and engineering)",
+      "college":[
+        "Ravindra college of engineering for women",
+        "2015-2019",
+        "64%"
+      ]
+    },
+    {
+      "course":"Intermediate(MPC)",
+      "college":[
+        "sri venkateswara junior college",
+        "2013-2015",
+        "80.5%"
+      ]
+    },
+    {
+      "course":"SSC",
+      "college":[
+        "ZPHS school",
+        "2013",
+        "8.7GPA"
+      ]
+    }
+  ],
+"skills":[
+    {
+"name":"operating systems",
+"value":"windows,linux"
+},
+  {
+    "name":"programming langages",
+    "value":"java,c,c++"
+  },
+  {
+    "name":"web development",
+    "value":"HTML,python,.net"
+  }
+]
 }
